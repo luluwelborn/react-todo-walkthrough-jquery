@@ -12,7 +12,7 @@ class CreateTodoForm extends Component {
 
   onInputChange(event) {
       this.setState ({
-        todos: event.target.value
+        todo: event.target.value
       })
   }
 
@@ -21,7 +21,7 @@ class CreateTodoForm extends Component {
       let newTodo = this.state.todo
       this.props.createTodo(newTodo)
       this.setState({
-        todo: ''
+        todo: " "
       })
   }
 
@@ -34,7 +34,7 @@ class CreateTodoForm extends Component {
             onChange={event => this.onInputChange(event)}
             placeholder='Write todo ...'
             type='text'
-            value='' />
+            value={this.state.todo} />
           <button type='submit'>Create Todo!</button>
         </form>
       </div>

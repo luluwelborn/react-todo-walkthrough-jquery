@@ -26,6 +26,7 @@ class TodosContainer extends Component {
   		body: newBody,
   		completed: false
   	}
+  	
   	TodoModel.create(newTodo).then((res) => {
     	console.log('created todo', res)
     	let todos = this.state.todos
