@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Todo from './Todo'
+import EditTodoForm from './EditTodoForm'
 
 class TodoList extends Component {
   render(){
@@ -7,7 +8,8 @@ class TodoList extends Component {
       return (
         <Todo
           key={todo._id}
-          todo={todo}/>
+          todo={todo}
+          onDeleteTodo={this.props.onDeleteTodo} />
       )
     })
     return(
